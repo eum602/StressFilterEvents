@@ -1,0 +1,50 @@
+version: '3'
+services:
+ server1:
+   build:
+     dockerfile: Dockerfile
+     context: ./server
+   volumes:
+    - /app/node_modules
+    - ./server:/app
+   environment: &environment
+     - FROM=0
+     - TO=50000 #latest #0,1,latest, etc
+     - RPC_URL=http://your_ip:rpc_port
+
+ server2:
+   build:
+     dockerfile: Dockerfile
+     context: ./server
+   volumes:
+    - /app/node_modules
+    - ./server:/app
+   environment: *environment
+
+ server3:
+   build:
+     dockerfile: Dockerfile
+     context: ./server
+   volumes:
+    - /app/node_modules
+    - ./server:/app
+   environment: *environment
+
+ server4:
+   build:
+     dockerfile: Dockerfile
+     context: ./server
+   volumes:
+    - /app/node_modules
+    - ./server:/app
+   environment: *environment
+
+
+ server5:
+   build:
+     dockerfile: Dockerfile
+     context: ./server
+   volumes:
+    - /app/node_modules
+    - ./server:/app
+   environment: *environment

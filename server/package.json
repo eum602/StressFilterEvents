@@ -1,0 +1,16 @@
+{
+  "name": "filter-events",
+  "version": "1.0.0",
+  "description": "filtering events in hyperledger besu",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "author": "Erick Pacheco Pedraza",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "request-promise": "^4.2.4",
+    "web3": "^0.20.6"
+  }
+}
