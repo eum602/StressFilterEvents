@@ -9,8 +9,9 @@ services:
     - ./server:/app
    environment: &environment
      - FROM=0
-     - TO=50000 #latest #0,1,latest, etc
-     - RPC_URL=http://your_ip:rpc_port
+     - TO=50000 #latest #latest #0,1,latest, etc
+     - RPC_URL=http://eth-lacchain.mytrust.id
+   network_mode: host
 
  server2:
    build:
@@ -20,6 +21,7 @@ services:
     - /app/node_modules
     - ./server:/app
    environment: *environment
+   network_mode: host
 
  server3:
    build:
@@ -29,6 +31,7 @@ services:
     - /app/node_modules
     - ./server:/app
    environment: *environment
+   network_mode: host   
 
  server4:
    build:
@@ -38,6 +41,7 @@ services:
     - /app/node_modules
     - ./server:/app
    environment: *environment
+   network_mode: host   
 
 
  server5:
@@ -48,3 +52,4 @@ services:
     - /app/node_modules
     - ./server:/app
    environment: *environment
+   network_mode: host
